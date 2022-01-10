@@ -138,6 +138,17 @@ window.addEventListener("load", function(event) {
 
     game.update();
 
+    if(game.world.carrot_count === 10){
+      engine.stop();
+      assets_manager.requestJSON("07/zone00.json", (zone) => {
+
+        game.world.setup(zone);
+        engine.start();
+
+      });
+
+    }
+
     if (game.world.door) {
 
       engine.stop();

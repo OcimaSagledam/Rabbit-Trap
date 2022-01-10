@@ -64,7 +64,7 @@
   
     server.listen(port, ip, function() {
   
-      console.log("Server started at " + ip + ":" + port + "!");
+      console.log("Server started at " + ip + ":" + port);
   
     });
   

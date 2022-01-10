@@ -556,6 +556,7 @@ Game.World.prototype = {
 
     }
 
+
     if (this.door) {
 
       if (this.door.destination_x != -1) {
