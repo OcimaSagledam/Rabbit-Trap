@@ -13,7 +13,7 @@ window.addEventListener("load", function(event) {
 
   //// CONSTANTS ////
 
-  const ZONE_PREFIX = "07/zone";
+  const ZONE_PREFIX = "08/zone";
   const ZONE_SUFFIX = ".json";
 
       /////////////////
@@ -137,6 +137,17 @@ window.addEventListener("load", function(event) {
     if (controller.up.active   ) { game.world.player.jump();      controller.up.active = false; }
 
     game.update();
+
+    if(game.world.carrot_count === 10){
+      engine.stop();
+      assets_manager.requestJSON("08/zone00.json", (zone) => {
+        game.world.carrot_count = 0;
+        game.world.setup(zone);
+        engine.start();
+
+      });
+
+    }
 
     if (game.world.door) {
 
