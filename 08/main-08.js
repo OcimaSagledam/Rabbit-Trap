@@ -6,7 +6,7 @@
   2. Added a p element for showing the number of carrots collected.
 
 */
-alert("Wellcome to Rabbit Trap! Collect all 50 carrots to win.");
+/* alert("Wellcome to Rabbit Trap! Collect all 50 carrots to win."); */
 
 window.addEventListener("load", function(event) {
 
@@ -82,6 +82,10 @@ window.addEventListener("load", function(event) {
     p.style.left = rectangle.left + "px";
     p.style.top  = rectangle.top + "px";
     p.style.fontSize = game.world.tile_set.tile_size * rectangle.height / game.world.height + "px";
+
+    /* message.style.left = rectangle.left + "px";
+    message.style.top  = rectangle.top + "px";
+    message.style.fontSize = game.world.tile_set.tile_size * rectangle.height / game.world.height + "px"; */
 
   };
 
@@ -184,6 +188,15 @@ window.addEventListener("load", function(event) {
   p.setAttribute("style", "color:#c07000; font-size:2.0em; position:fixed;");
   p.innerHTML = "Carrots: 0";
   document.body.appendChild(p);
+
+ /*  var message              = document.createElement("message");
+  message.setAttribute("style", "color:#c07000; font-size:5px; position:relative;");
+  message.innerHTML = "Wellcome to Rabbit Trap! Collect all 50 carrots to win the game.";
+  document.body.appendChild(message);
+
+  setTimeout(() => {
+    document.getElementById('message').remove()
+  }, 5000); */
 
       ////////////////////
     //// INITIALIZE ////
