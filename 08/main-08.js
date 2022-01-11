@@ -6,6 +6,7 @@
   2. Added a p element for showing the number of carrots collected.
 
 */
+alert("Wellcome to Rabbit Trap! Collect all 50 carrots to win.");
 
 window.addEventListener("load", function(event) {
 
@@ -138,7 +139,7 @@ window.addEventListener("load", function(event) {
 
     game.update();
 
-    if(game.world.carrot_count === 10){
+    if(game.world.carrot_count === 50){
       engine.stop();
       alert("Good job! You collected all the carrots. Click OK to play again.");
       window.location.reload(true);
