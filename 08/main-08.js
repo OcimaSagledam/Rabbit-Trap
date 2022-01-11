@@ -140,12 +140,14 @@ window.addEventListener("load", function(event) {
 
     if(game.world.carrot_count === 10){
       engine.stop();
+      alert("Good job! You collected all the carrots. Click OK to play again.");
+      window.location.reload(true);
+      /* čuvaj ovaj dio za hard mode di tribaš izbjegavat mrkve
       assets_manager.requestJSON("08/zone00.json", (zone) => {
         game.world.carrot_count = 0;
         game.world.setup(zone);
         engine.start();
-
-      });
+      }); */
 
     }
 

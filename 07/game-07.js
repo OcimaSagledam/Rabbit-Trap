@@ -302,7 +302,11 @@ Game.Carrot.prototype = {
   frame_sets: { "twirl":[12, 13] },
 
   updatePosition:function() {
-
+    /*
+    Promini sljedeću liniju koda kad budeš radija hard mode, bit će ti cilj skupit mrkvu koja se brzo vrti
+    this.position_x += 0.5;
+    this.position_y += 0.9;
+    */
     this.position_x += 0.1;
     this.position_y += 0.2;
 
