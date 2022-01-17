@@ -1,5 +1,3 @@
-// Frank Poth 04/18/2018
-
 /* Changes:
 
   1. Added the drawing calls for drawing the grass and carrots in render.
@@ -83,10 +81,6 @@ window.addEventListener("load", function(event) {
     p.style.top  = rectangle.top + "px";
     p.style.fontSize = game.world.tile_set.tile_size * rectangle.height / game.world.height + "px";
 
-    /* message.style.left = rectangle.left + "px";
-    message.style.top  = rectangle.top + "px";
-    message.style.fontSize = game.world.tile_set.tile_size * rectangle.height / game.world.height + "px"; */
-
   };
 
   var render = function() {
@@ -147,12 +141,6 @@ window.addEventListener("load", function(event) {
       engine.stop();
       alert("Good job! You collected all the carrots. Click OK to play again.");
       window.location.reload(true);
-      /* čuvaj ovaj dio za hard mode di tribaš izbjegavat mrkve
-      assets_manager.requestJSON("08/zone00.json", (zone) => {
-        game.world.carrot_count = 0;
-        game.world.setup(zone);
-        engine.start();
-      }); */
 
     }
 
